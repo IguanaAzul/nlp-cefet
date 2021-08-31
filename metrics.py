@@ -5,7 +5,7 @@ import warnings
 from typing import List
 
 
-class Metricas:
+class Metrics:
     def __init__(self, y: List[float], predict_y: List[float]):
         self.y = y
         self.predict_y = predict_y

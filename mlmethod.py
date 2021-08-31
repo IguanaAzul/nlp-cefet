@@ -1,11 +1,11 @@
 import pandas as pd
-from preprocessamento_atributos_competicao import gerar_atributos_ator, gerar_atributos_resumo, \
+from preprocessing import gerar_atributos_ator, gerar_atributos_resumo, \
     gerar_atributos_diretor, gerar_atributos_escritores, gerar_atributos_geral
 from typing import List
 import numpy as np
 
 
-class MetodoCompeticao:
+class MLMethod:
     def __init__(self, ml_method):
         self.ml_method = ml_method
         self.dic_int_to_nom_classe = {}
