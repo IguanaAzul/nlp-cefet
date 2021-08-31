@@ -83,9 +83,9 @@ class MLMethod:
         return y_to_predict, arr_predict
 
     def eval(self, df_treino: pd.DataFrame, df_data_to_predict: pd.DataFrame, col_classe: str):
-        y_to_predict, y_actor = self.eval_actors(df_treino, df_data_to_predict, col_classe)
-        y_to_predict, y_director = self.eval_director(df_treino, df_data_to_predict, col_classe)
-        y_to_predict, y_writer = self.eval_writers(df_treino, df_data_to_predict, col_classe)
+        _, y_actor = self.eval_actors(df_treino, df_data_to_predict, col_classe)
+        _, y_director = self.eval_director(df_treino, df_data_to_predict, col_classe)
+        _, y_writer = self.eval_writers(df_treino, df_data_to_predict, col_classe)
         y_to_predict, y_bow = self.eval_bow(df_treino, df_data_to_predict, col_classe)
         arr_predictions = list(np.array(self.combine_predictions(y_actor, y_director, y_writer, y_bow)).astype(int))
         return y_to_predict, arr_predictions
